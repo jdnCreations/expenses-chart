@@ -15,17 +15,12 @@ fetch('./data.json')
     currentDay = currentDay.toLowerCase();
         
     data.forEach(day => {
-        // set today's bar:hover to cyan
-
         const bar = document.querySelector(`.${day.day}-bar`);
         const tooltip = document.querySelector(`#${day.day} .tooltiptext`);
         tooltip.innerHTML = `$${day.amount}`;
         bar.style.height = calculateBarHeight(day.amount);
 
-        console.log(day.day);
-        console.log(currentDay);
         if (day.day === currentDay) {
-            console.log('today is ' + day.day);
             theCurrentDay = day.day;
             bar.classList.add('currentDay');
         }
@@ -33,12 +28,10 @@ fetch('./data.json')
     const todaysBar = document.querySelector(`.${theCurrentDay}-bar`);
 
     todaysBar.onmouseover = () => {
-        console.log("MOUSE WENT OVER RIGHT BAR");
         todaysBar.style.backgroundColor = "hsla(186, 34%, 60%, .5)";
     }
 
     todaysBar.onmouseleave = () => {
-        console.log("mouse left")
         todaysBar.style.backgroundColor = "hsla(10, 79%, 65%)";
     }
     

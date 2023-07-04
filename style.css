@@ -31,17 +31,21 @@ img, svg, picture {
     --fs-600: 1.5rem;
     --fs-700: 1.75rem;
     --fs-800: 2rem;
-    --fs-900: 2.75rem;
+    --fs-900: 2.9375rem;
 
     --fw-400: 400;
     --fw-700: 700;
 
     --font: 'DM Sans';
 
+    --fs-balance-title: 1.375rem;
+
     --width-desktop: 1110px;
     --width-mobile: 100%;
     --grid-gap: 30px;
     --margin-mobile: 15px;
+    --padding-mobile-horizontal: 20px;
+    --padding-mobile-vertical: 30px;
 }
 
 body {
@@ -89,7 +93,7 @@ main {
 
 #amount {
     font-weight: var(--fw-700);
-    font-size: var(--fs-700);
+    font-size: var(--fs-800);
 }
 
 .spending {
@@ -160,6 +164,7 @@ main {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+    z-index: 5;
 }
 
 .bar:hover {
@@ -198,4 +203,59 @@ main {
 
 #monthly-title {
     padding-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .bar {
+        width: 32px;
+    }
+
+    #container {
+        margin: 67px 16px;
+        gap: 16px;
+    }
+
+    #amount {
+        font-size: var(--fs-600);
+    }
+
+    #heading {
+        font-size: var(--fs-300);
+    }
+
+    #title {
+        font-size: var(--fs-600);
+    }
+
+
+
+    .my-balance, .spending {
+        padding: var(--padding-mobile-vertical) var(--padding-mobile-horizontal);
+    }
+
+    .my-balance {
+        padding: 24px 20px;
+        height: 100px;
+    }
+
+    #monthly-total {
+        font-size: 1.875rem;
+    }
+
+    #monthly-title, #last-month, #percentage {
+        font-size: var(--fs-300);
+        letter-spacing: -0.4px;
+    }
+
+    .spending {
+        height: 421px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    #days {
+        height: 220px;
+    }
 }
