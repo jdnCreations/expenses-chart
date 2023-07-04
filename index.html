@@ -25,14 +25,47 @@
       <div class="spending">
         <div id="weekly-spending">
           <p id="title">Spending - Last 7 days</p>
+
+          <!-- <canvas id="myChart"></canvas> -->
           <div id="days">
-            <div id="mon" class="day">mon</div>
-            <div id="tue" class="day">tue</div>
-            <div id="wed" class="day">wed</div>
-            <div id="thu" class="day">thu</div>
-            <div id="fri" class="day">fri</div>
-            <div id="sat" class="day">sat</div>
-            <div id="sun" class="day">sun</div>
+            <div id="mon" class="day tooltip">
+              <span class="tooltiptext"></span>
+              <div class="mon-bar bar"></div>
+              <div class="label">mon</div>
+            </div>
+            <div id="tue" class="day tooltip">
+
+              <span class="tooltiptext"></span>
+              <div class="tue-bar bar"></div>
+              <div class="label">tue</div>
+            </div>
+            <div id="wed" class="day tooltip">
+              <span class="tooltiptext"></span>
+              <div class="wed-bar bar"></div>
+              <div class="label">wed</div>
+            </div>
+            <div id="thu" class="day tooltip">
+              <span class="tooltiptext"></span>
+              <div class="thu-bar bar"></div>
+              <div class="label">thu</div>
+            </div>
+            <div id="fri" class="day tooltip">
+              <span class="tooltiptext"></span>
+              <div class="fri-bar bar"></div>
+              <div div class="label">fri</div>
+            </div>
+            <div id="sat" class="day tooltip">
+
+              <span class="tooltiptext"></span>
+              <div class="sat-bar bar"></div>
+              <div class="label">sat</div>
+            </div>
+            <div id="sun" class="day tooltip">
+
+              <span class="tooltiptext"></span>
+              <div class="sun-bar bar"></div>
+              <div class="label">sun</div>
+            </div>
           </div>
         </div>
 
@@ -50,6 +83,6 @@
     </div>
   </main>
 
-  
+  <script src="./script.js"></script>
 </body>
 </html>

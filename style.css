@@ -16,20 +16,22 @@ img, svg, picture {
     --clr-primary-red: hsl(10, 79%, 65%);
     --clr-primary-cyan: hsl(186, 34%, 60%);
 
+    --clr-hover: hsla(10, 79%, 65%, .6);
+
     --clr-neutral-dark-brown: hsl(25, 47%, 15%);
     --clr-neutral-med-brown: hsl(28, 10%, 53%);
     --clr-neutral-cream: hsl(27, 66%, 92%);
     --clr-neutral-pale-orange: hsl(33, 100%, 98%);
 
-    --fs-100: 0.75rem;
-    --fs-200: 0.875rem;
+    --fs-100: 0.875rem;
+    --fs-200: 0.9375rem;
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.25rem;
     --fs-600: 1.5rem;
     --fs-700: 1.75rem;
     --fs-800: 2rem;
-    --fs-900: 3.75rem;
+    --fs-900: 2.75rem;
 
     --fw-400: 400;
     --fw-700: 700;
@@ -61,10 +63,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 540px;
+    gap: 24px;
 }
 
 .my-balance {
-    padding: 30px;
+    padding: 35px 40px;
     height: 125px;
     display: flex;
     align-items: center;
@@ -72,6 +75,10 @@ main {
     background-color: var(--clr-primary-red);
     color: var(--clr-neutral-pale-orange);
     border-radius: 20px;
+}
+
+#heading {
+    font-size: var(--fs-400);
 }
 
 #info {
@@ -82,4 +89,113 @@ main {
 
 #amount {
     font-weight: var(--fw-700);
+    font-size: var(--fs-700);
+}
+
+.spending {
+    background-color: var(--clr-neutral-pale-orange);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 40px;
+    height: 510px;
+}
+
+#weekly-spending {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-dark-brown);
+}
+
+#days { 
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#day {
+    flex: 1 1 0%;
+    text-align: center;
+    width: 50px;
+}
+
+.label {
+    padding-top: 5px;
+    text-align: center;
+    font-size: var(--fs-200);
+}
+
+.bar {
+    background-color: var(--clr-primary-red);
+    width: 50px;
+    border-radius: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: var(--clr-neutral-dark-brown);
+    border-radius: 5px;
+    padding: 8px 4px;
+    position: absolute;
+    text-align: center;
+    color: var(--clr-neutral-cream);
+    font-weight: var(--fw-700);
+
+    width: 80px;
+    top: -50px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.bar:hover {
+    cursor: pointer;
+    background-color: var(--clr-hover);
+}
+
+
+#monthly-spending {
+    border-top: 2px solid var(--clr-neutral-cream);
+    margin-top: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#percentage {
+    text-align: right;
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-dark-brown);
+}
+
+#monthly-total {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-dark-brown);
+}
+
+#monthly-difference {
+    place-self: end ;
+}
+
+#monthly-total {
+    line-height: 85%;
+}
+
+#monthly-title {
+    padding-bottom: 15px;
 }
